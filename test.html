@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Keen2Klean Cleaning Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional retail, commercial and builders/sparkle cleaning specialists. National coverage for retail & commercial. South Yorkshire Airbnbs & local commercial." />
+
+  <style>
+    :root{
+      --black:#0e0e0e;
+      --text:#1a1a1a;
+      --muted:#6e6e6e;
+
+      /* Darker grey page backdrop */
+      --bg:#d3d3d3;
+      --panel:#ffffff;
+      --panel2:#fafafa;
+
+      --border:#e3e3e3;
+      --shadow:0 14px 30px rgba(0,0,0,.10);
+      --shadow2:0 22px 44px rgba(0,0,0,.14);
+      --radius:16px;
+      --max:1200px;
+
+      --focus:0 0 0 3px rgba(0,0,0,.08);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:auto;padding:0 1.25rem}
+
+    /* HEADER */
+    header{
+      background:rgba(255,255,255,.86);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:.85rem 0;
+      gap:1rem;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.85rem;
+      min-width:260px;
+    }
+    .brand img{
+      height:78px;
+      filter:contrast(1.08);
+    }
+
+    nav.nav-links{
+      display:flex;
+      gap:1.1rem;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .nav-links a{
+      font-size:.82rem;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      color:#202020;
+      padding:.55rem .6rem;
+      border-radius:999px;
+      transition:background .25s ease, transform .25s ease;
+      outline:none;
+    }
+    .nav-links a:hover{
+      background:#ededed;
+      transform:translateY(-1px);
+    }
+    .nav-links a:focus-visible{
+      box-shadow: var(--focus);
+    }
+
+    /* CTA */
+    .cta{
+      background:#7f7f7f;
+      color:#fff;
+      padding:.65rem 1.1rem;
+      border-radius:999px;
+      font-weight:650;
+      font-size:.78rem;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      border:1px solid #6f6f6f;
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+      white-space:nowrap;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5rem;
+    }
+    .cta:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 18px rgba(0,0,0,.12);
+      background:#6c6c6c;
+    }
+    .cta:focus-visible{ box-shadow: var(--focus); }
+    .cta.secondary{
+      background:#fff;
+      color:#111;
+      border:1px solid var(--border);
+    }
+    .cta.secondary:hover{
+      background:#f6f6f6;
+      box-shadow:0 10px 18px rgba(0,0,0,.08);
+    }
+
+    /* SECTIONS */
+    section{padding:3.5rem 0}
+    h2{
+      text-align:center;
+      font-size:2rem;
+      margin:0 0 .75rem;
+      letter-spacing:.01em;
+    }
+    .sub{
+      text-align:center;
+      color:var(--muted);
+      max-width:860px;
+      margin:0 auto 2.2rem;
+      font-size:1.02rem;
+    }
+
+    .divider{
+      height:1px;
+      background:linear-gradient(to right, transparent, #cfcfcf, transparent);
+      margin:0;
+    }
+
+    /* HERO */
+    .hero{
+      padding:3.2rem 0 2.6rem;
+    }
+    .hero-wrap{
+      background:linear-gradient(180deg, #ffffff, #fbfbfb);
+      border:1px solid var(--border);
+      border-radius:calc(var(--radius) + 6px);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:0;
+      align-items:stretch;
+    }
+    .hero-copy{
+      padding:2.4rem 2.2rem;
+    }
+    .hero h1{
+      font-size:clamp(2rem, 3.2vw, 3.1rem);
+      line-height:1.12;
+      margin:0 0 .9rem;
+      letter-spacing:.01em;
+    }
+    .hero p{
+      color:var(--muted);
+      margin:0 0 1.35rem;
+      font-size:1.05rem;
+      max-width:60ch;
+    }
+    .pills{
+      display:flex;
+      gap:.55rem;
+      flex-wrap:wrap;
+      margin:0 0 1.35rem;
+    }
+    .pill{
+      font-size:.78rem;
+      color:#1e1e1e;
+      background:#f0f0f0;
+      border:1px solid #e6e6e6;
+      padding:.4rem .65rem;
+      border-radius:999px;
+      letter-spacing:.04em;
+    }
+    .hero-actions{
+      display:flex;
+      gap:.8rem;
+      flex-wrap:wrap;
+      margin-top:.25rem;
+    }
+    .hero-media{
+      background:#f5f5f5;
+      border-left:1px solid var(--border);
+      display:flex;
+      align-items:stretch;
+      justify-content:stretch;
+      min-height:320px;
+      position:relative;
+    }
+    .hero-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .hero-media:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg, rgba(255,255,255,.10), rgba(255,255,255,0));
+      pointer-events:none;
+    }
+
+    /* TRUST STRIP */
+    .trust-strip{
+      padding:1.35rem 0 0;
+    }
+    .trust-panel{
+      background:var(--panel2);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:1.2rem 1.25rem;
+      text-align:center;
+    }
+    .trust-kicker{
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--muted);
+      margin:0 0 .35rem;
+    }
+    .trust-main{
+      margin:0;
+      font-weight:750;
+      letter-spacing:.02em;
+    }
+    .trust-note{
+      margin:.35rem auto 0;
+      color:var(--muted);
+      max-width:82ch;
+      font-size:.95rem;
+    }
+
+    /* GRID CARDS */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:1.25rem;
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:1.5rem 1.45rem;
+      transition:transform .45s ease, box-shadow .45s ease;
+      will-change: transform;
+    }
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow2);
+    }
+    .card h3{
+      margin:0 0 .5rem;
+      letter-spacing:.01em;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+    .mini{
+      margin-top:.85rem;
+      color:#4b4b4b;
+      font-size:.92rem;
+      line-height:1.55;
+    }
+
+    /* MEET THE TEAM */
+    .team-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:1.25rem;
+    }
+    .profile{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transition:transform .45s ease, box-shadow .45s ease;
+      will-change: transform;
+    }
+    .profile:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow2);
+    }
+    .avatar{
+      height:240px;
+      background:linear-gradient(180deg,#f5f5f5,#ededed);
+      border-bottom:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px;
+    }
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      border-radius:12px;
+      background:#fff;
+      border:1px solid #e8e8e8;
+      box-shadow:0 10px 18px rgba(0,0,0,.06);
+    }
+    .profile-body{
+      padding:1.1rem 1.1rem 1.25rem;
+    }
+    .profile-body h3{
+      margin:.1rem 0 .15rem;
+    }
+    .role{
+      color:#666;
+      font-size:.92rem;
+      margin:0 0 .75rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+    .profile-body p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    /* GALLERY */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:1rem;
+    }
+    .shot{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform .45s ease, box-shadow .45s ease;
+      will-change: transform;
+    }
+    .shot:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow2);
+    }
+    .shot img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+    }
+    .cap{
+      padding:.85rem .95rem;
+      color:var(--muted);
+      font-size:.92rem;
+      border-top:1px solid var(--border);
+      background:#fff;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:1.25rem;
+    }
+    .t-card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:1.4rem 1.35rem;
+      transition:transform .45s ease, box-shadow .45s ease;
+      will-change: transform;
+    }
+    .t-card:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow2);
+    }
+    .t-quote{
+      margin:0;
+      color:#2a2a2a;
+      font-size:1rem;
+      line-height:1.7;
+    }
+    .t-meta{
+      margin-top:1rem;
+      padding-top:1rem;
+      border-top:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:1rem;
+    }
+    .t-name{
+      font-weight:750;
+      letter-spacing:.01em;
+    }
+    .t-role{
+      color:var(--muted);
+      font-size:.95rem;
+      margin-top:.15rem;
+    }
+    .t-tag{
+      font-size:.72rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      border:1px solid #e6e6e6;
+      background:#f3f3f3;
+      padding:.35rem .6rem;
+      border-radius:999px;
+      color:#333;
+      white-space:nowrap;
+    }
+
+    /* COVERAGE MAPS */
+    .coverage-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+      gap:1.25rem;
+    }
+    .map-card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transition:transform .45s ease, box-shadow .45s ease;
+      will-change: transform;
+    }
+    .map-card:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow2);
+    }
+    .map-body{
+      padding:1.25rem 1.25rem 0;
+    }
+    .map-body h3{
+      margin:.1rem 0 .4rem;
+    }
+    .map-body p{
+      margin:0 0 1rem;
+      color:var(--muted);
+    }
+    .map-wrap{
+      position:relative;
+      width:100%;
+      height:340px;
+      border-top:1px solid var(--border);
+      background:#f5f5f5;
+    }
+    .map-wrap iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+    .map-notes{
+      padding:1rem 1.25rem 1.25rem;
+      color:#4b4b4b;
+      font-size:.95rem;
+      line-height:1.55;
+    }
+
+    /* CONTACT */
+    .contact{
+      padding:3.2rem 0;
+    }
+    .contact-wrap{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:calc(var(--radius) + 6px);
+      box-shadow:var(--shadow);
+      padding:2rem 1.6rem;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(290px, 1fr));
+      gap:1.5rem;
+      align-items:start;
+    }
+    .contact h2{margin-top:0}
+    .contact .sub{margin-bottom:1.5rem}
+
+    .contact-box{
+      border:1px solid var(--border);
+      background:#fafafa;
+      border-radius:var(--radius);
+      padding:1.2rem 1.15rem;
+    }
+    .contact-box h3{margin:0 0 .6rem}
+    .contact-box p{margin:.25rem 0;color:#3a3a3a}
+    .contact-box .small{color:var(--muted);font-size:.95rem;margin-top:.8rem}
+
+    .fineprint{
+      color:var(--muted);
+      font-size:.9rem;
+      margin-top:.65rem;
+      line-height:1.5;
+    }
+
+    footer{
+      padding:1.6rem 0;
+      text-align:center;
+      color:#777;
+      font-size:.85rem;
+    }
+
+    /* Floating WhatsApp button */
+    .wa-float{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:999;
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      padding:.85rem 1rem;
+      border-radius:999px;
+      background:#111;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 16px 28px rgba(0,0,0,.18);
+      font-size:.82rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .wa-float:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 34px rgba(0,0,0,.22);
+    }
+    .wa-float:focus-visible{ box-shadow: var(--focus); outline:none; }
+
+    /* MOBILE */
+    @media(max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero-media{border-left:none;border-top:1px solid var(--border);min-height:260px}
+      .hero-copy{padding:1.9rem 1.5rem}
+      nav.nav-links{gap:.35rem}
+      .nav-links a{padding:.45rem .5rem}
+      .brand img{height:68px}
+      .avatar{height:230px}
+      .wa-float{right:12px; bottom:12px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/keen2klean.png" alt="Keen2Klean Logo" />
+    </div>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#how">How we work</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#team">Meet the team</a>
+      <a href="#retail">Retail</a>
+      <a href="#commercial">Commercial</a>
+
+      <a class="cta"
+         href="https://wa.me/447444839930?text=Hi%20Keen2Klean%2C%20I%E2%80%99d%20like%20to%20request%20a%20quote.%20Location%3A%20%20Service%3A%20%20Timescales%3A%20"
+         target="_blank" rel="noopener">Request a Quote</a>
+
+      <a href="tel:07444839930" class="cta secondary">Call 07444 839930</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <!-- UPDATED: removed “Done Properly” -->
+          <h1>Retail, Commercial & Builders/Sparkle Cleans</h1>
+          <p>
+            Keen2Klean is an expanding cleaning business led by <strong>Elle Shaw</strong>, delivering reliable,
+            high-standard cleans for major retail sites, commercial properties, and builders/sparkle handovers.
+            Whether it’s a tight handover deadline, a store opening, or a high-spec post-build clean — we bring consistency,
+            attention to detail, and clear communication from start to finish.
+          </p>
+
+          <div class="pills">
+            <span class="pill">Builders & Sparkle Cleans</span>
+            <span class="pill">Retail & Live Environments</span>
+            <span class="pill">Commercial Properties</span>
+            <span class="pill">Airbnbs (South Yorkshire)</span>
+            <span class="pill">Fully Insured</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="cta"
+               href="https://wa.me/447444839930?text=Hi%20Keen2Klean%2C%20I%E2%80%99d%20like%20to%20request%20a%20quote.%20Location%3A%20%20Service%3A%20%20Timescales%3A%20"
+               target="_blank" rel="noopener">WhatsApp for a Quote</a>
+            <a class="cta secondary" href="mailto:keen2kleanltd@yahoo.com">Email Us</a>
+          </div>
+
+          <p class="fineprint" style="margin-top:1rem">
+            Fast response, straightforward quoting, and flexible teams for planned work or short-notice support.
+          </p>
+        </div>
+
+        <div class="hero-media">
+          <img src="assets/van-new-kk2.png" alt="Keen2Klean van" />
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-strip">
+      <div class="trust-panel">
+        <p class="trust-kicker">Trusted Across the Retail Sector</p>
+        <p class="trust-main">Co-op • Tesco • Morrisons</p>
+        <p class="trust-note">
+          From national retail brands to commercial sites — the same high standards apply. We understand presentation,
+          deadlines, and the importance of getting sites customer-ready.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p class="sub">
+      Practical, scalable cleaning built around your schedule. We support retail rollouts and refits, commercial sites,
+      builders/sparkle handovers nationally, plus Airbnbs and local commercial work across South Yorkshire — with the same focus
+      on quality, reliability, and clear standards.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Builders & Sparkle Cleans</h3>
+        <p>
+          Post-construction, fit-out, and handover cleans delivered with an eye for detail — ready for sign-off or opening day.
+        </p>
+        <div class="mini">
+          Ideal for: contractors, shopfitting teams, refurb projects, and deadline-led handovers. <strong>National coverage.</strong>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Retail Cleaning</h3>
+        <p>
+          High-standard cleaning for live retail environments, refits, rollouts, and store openings — without disruption.
+        </p>
+        <div class="mini">
+          We work around trading hours and project timelines to keep sites safe, clean, and customer-ready. <strong>National support.</strong>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Commercial Cleaning</h3>
+        <p>
+          Offices, hospitality, salons, warehouses, and commercial premises cleaned consistently to a professional standard.
+        </p>
+        <div class="mini">
+          Planned schedules available, plus one-off deep cleans where presentation and hygiene matter most. <strong>National support for commercial sites.</strong>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Airbnbs & Local Commercial (South Yorkshire)</h3>
+        <p>
+          Reliable turnover cleans for short-lets and Airbnbs, plus local commercial support — delivered to a consistent standard.
+        </p>
+        <div class="mini">
+          Ideal for: hosts, managing agents, small businesses and local sites needing dependable cleans. <strong>South Yorkshire based.</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <h2>How We Work</h2>
+    <p class="sub">
+      A simple process that keeps standards clear and projects moving. You’ll know what’s included, when it’s happening,
+      and what “done” looks like — whether it’s a retail handover, a commercial schedule, or a builders/sparkle clean.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1. Scope & Standards</h3>
+        <p>
+          We confirm the job type, priorities, deadlines, and any site requirements (access, safety, trading hours, etc.).
+        </p>
+        <div class="mini">
+          Outcome: clear expectations and an accurate quote — no guesswork.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>2. Planned Delivery</h3>
+        <p>
+          We assign the right team and timings, then deliver the clean efficiently with minimal disruption.
+        </p>
+        <div class="mini">
+          Outcome: reliable attendance, consistent results, and smooth communication.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>3. Quality Check & Sign-Off</h3>
+        <p>
+          Before completion, we check key areas and finish details — ensuring the space is ready for handover or use.
+        </p>
+        <div class="mini">
+          Outcome: a clean you can confidently sign off on.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+    <h2>Testimonials</h2>
+    <p class="sub">
+      A few words from clients we’ve supported across retail, commercial sites, builders/sparkle handovers, and Airbnb turnovers.
+    </p>
+
+    <div class="testimonials-grid">
+      <div class="t-card">
+        <p class="t-quote">
+          “We had a tight handover deadline and Keen2Klean delivered exactly what we needed — reliable, thorough,
+          and easy to communicate with. Site was ready for opening on time.”
+        </p>
+        <div class="t-meta">
+          <div>
+            <div class="t-name">Project Supervisor</div>
+            <div class="t-role">Retail refit & handover clean</div>
+          </div>
+          <span class="t-tag">Retail</span>
+        </div>
+      </div>
+
+      <div class="t-card">
+        <p class="t-quote">
+          “Consistent standards every visit. The team is professional, punctual, and the finish is always spot on.
+          It’s one less thing for us to worry about.”
+        </p>
+        <div class="t-meta">
+          <div>
+            <div class="t-name">Operations Manager</div>
+            <div class="t-role">Commercial cleaning support</div>
+          </div>
+          <span class="t-tag">Commercial</span>
+        </div>
+      </div>
+
+      <div class="t-card">
+        <p class="t-quote">
+          “Turnovers are always on time and to a great standard. Clear communication and dependable results —
+          exactly what you need for guest changeovers.”
+        </p>
+        <div class="t-meta">
+          <div>
+            <div class="t-name">Short-Let Host</div>
+            <div class="t-role">Airbnb turnover cleans (South Yorkshire)</div>
+          </div>
+          <span class="t-tag">Airbnb</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="fineprint" style="text-align:center; margin-top:1.25rem">
+      Want references for commercial or retail work? We can share them where appropriate.
+    </p>
+  </div>
+</section>
+
+<section id="coverage">
+  <div class="container">
+    <h2>Coverage</h2>
+    <p class="sub">
+      Retail, commercial, and builders/sparkle cleans are available <strong>nationally</strong>.
+      Airbnb turnovers and local commercial support are <strong>South Yorkshire</strong> based.
+    </p>
+
+    <div class="coverage-grid">
+      <article class="map-card">
+        <div class="map-body">
+          <h3>National Coverage — Retail, Commercial & Builders/Sparkle</h3>
+          <p>
+            Flexible teams for planned work, refits, store openings, and builders/sparkle handovers.
+            We travel nationally for the right projects and deadlines.
+          </p>
+        </div>
+
+        <div class="map-wrap" aria-label="National coverage map">
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=United%20Kingdom&z=6&output=embed"
+            title="National Coverage Map">
+          </iframe>
+        </div>
+
+        <div class="map-notes">
+          Typical support: store rollouts/refits, builders/sparkle cleans, and commercial sites where presentation and deadlines matter.
+          For multi-site retail work, we can plan teams around your schedule.
+        </div>
+      </article>
+
+      <article class="map-card">
+        <div class="map-body">
+          <h3>South Yorkshire — Airbnbs & Local Commercial</h3>
+          <p>
+            Turnover cleans for short-lets/Airbnbs and local commercial support across South Yorkshire.
+          </p>
+        </div>
+
+        <div class="map-wrap" aria-label="South Yorkshire coverage map">
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=South%20Yorkshire&z=10&output=embed"
+            title="South Yorkshire Coverage Map">
+          </iframe>
+        </div>
+
+        <div class="map-notes">
+          Includes areas such as Sheffield, Rotherham, Doncaster, Barnsley and surrounding towns/villages.
+          If you’re just outside South Yorkshire, message us — we’ll confirm availability.
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="container">
+    <h2>Meet the Team</h2>
+    <p class="sub">
+      Reliable people deliver reliable results — here are the faces behind Keen2Klean.
+    </p>
+
+    <div class="team-grid">
+      <div class="profile">
+        <div class="avatar">
+          <img src="assets/el.png" alt="Elle Shaw" />
+        </div>
+        <div class="profile-body">
+          <h3>Elle Shaw</h3>
+          <div class="role">Director</div>
+          <p>
+            Elle leads Keen2Klean with a focus on consistent delivery, clear communication, and high standards across every site.
+            She’s committed to continuous development and improving systems that support reliable outcomes for clients.
+            Outside of work, she values time with family and friends and enjoys travel.
+          </p>
+        </div>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">
+          <img src="assets/pat.png" alt="Pat" />
+        </div>
+        <div class="profile-body">
+          <h3>Pat</h3>
+          <p>
+            Pat brings a practical, hands-on approach and supports smooth day-to-day delivery on site.
+            He’s adaptable, solution-focused, and comfortable turning his hand to a wide range of tasks to keep projects moving.
+            Outside of work, he enjoys darts and football.
+          </p>
+        </div>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">
+          <img src="assets/morgan.png" alt="Morgan" />
+        </div>
+        <div class="profile-body">
+          <h3>Morgan</h3>
+          <p>
+            Morgan is detail-focused and dependable, taking pride in producing presentation-ready finishes and maintaining consistent standards.
+            Outside of work, she values family time and enjoys creating memorable experiences through travel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="retail">
+  <div class="container">
+    <h2>Retail Cleaning</h2>
+    <p class="sub">
+      Retail environments need a different approach — speed, safety, and presentation. We support store refits, openings,
+      and ongoing cleaning with teams that understand deadlines and customer-facing standards.
+    </p>
+
+    <div class="gallery">
+      <figure class="shot">
+        <img src="assets/retail-1.png" alt="Retail cleaning example 1" />
+        <figcaption class="cap">Retail environment cleaned and presentation-ready.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/retail-2.png" alt="Retail cleaning example 2" />
+        <figcaption class="cap">Clean aisles, safe walkways, and attention to detail.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/retail-3.png" alt="Retail cleaning example 3" />
+        <figcaption class="cap">Back-of-house and operational areas kept to standard.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/retail-4.png" alt="Retail cleaning example 4" />
+        <figcaption class="cap">Self-checkout tills and customer touchpoints cleaned for hygiene and presentation.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/retail-5.png" alt="Retail cleaning example 5" />
+        <figcaption class="cap">Customer-facing zones cleaned with minimal disruption.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="commercial">
+  <div class="container">
+    <h2>Commercial Cleaning</h2>
+    <p class="sub">
+      From offices and meeting rooms to hospitality and specialist workspaces, we deliver consistent commercial cleans that
+      protect your image and keep your space comfortable, safe, and ready for staff and customers.
+    </p>
+
+    <div class="gallery">
+      <figure class="shot">
+        <img src="assets/commercial-1.png" alt="Commercial cleaning example 1" />
+        <figcaption class="cap">Hospitality spaces cleaned and reset for service.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/commercial-2.png" alt="Commercial cleaning example 2" />
+        <figcaption class="cap">Office and meeting areas cleaned to a professional standard.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/commercial-3.png" alt="Commercial cleaning example 3" />
+        <figcaption class="cap">Back-of-house areas cleaned with a focus on hygiene.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/commercial-4.png" alt="Commercial cleaning example 4" />
+        <figcaption class="cap">Commercial spaces cleaned with care and consistency.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/commercial-5.png" alt="Commercial cleaning example 5" />
+        <figcaption class="cap">Workstations, salons and customer areas kept spotless.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <h2>Get in Touch</h2>
+      <p class="sub">
+        Need support for a handover, store opening, refurb clean, builders/sparkle clean, or commercial cleaning?
+        Message us directly on WhatsApp for the fastest response.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Direct Contact</h3>
+          <p><strong>Elle Shaw</strong> — Director</p>
+          <p>📞 <a href="tel:07444839930">07444 839930</a></p>
+          <p>📧 <a href="mailto:keen2kleanltd@yahoo.com">keen2kleanltd@yahoo.com</a></p>
+
+          <p class="small">
+            You’ll deal directly with the decision-maker — quick responses, clear communication, and reliable delivery.
+          </p>
+
+          <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:.9rem">
+            <a class="cta"
+               href="https://wa.me/447444839930?text=Hi%20Keen2Klean%2C%20I%E2%80%99d%20like%20to%20request%20a%20quote."
+               target="_blank" rel="noopener">WhatsApp</a>
+            <a class="cta secondary" href="tel:07444839930">Call</a>
+            <a class="cta secondary" href="mailto:keen2kleanltd@yahoo.com">Email</a>
+          </div>
+
+          <div class="fineprint">
+            Tip: If you have photos, site details, postcode and timescales — send them on WhatsApp and we can quote faster.
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <h3>Request a Quote (WhatsApp)</h3>
+          <p>
+            Click below to message us on WhatsApp. Include:
+            <br>• Location / postcode
+            <br>• Service type
+            <br>• Timescales / deadlines
+            <br>• Photos if available
+          </p>
+
+          <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem">
+            <a class="cta"
+               style="padding:.85rem 1.2rem"
+               href="https://wa.me/447444839930?text=Hi%20Keen2Klean%2C%20I%E2%80%99d%20like%20to%20request%20a%20quote.%20Location%3A%20%20Service%3A%20%20Timescales%3A%20"
+               target="_blank" rel="noopener">Message on WhatsApp</a>
+          </div>
+
+          <p class="small" style="margin-top:.9rem">
+            Fast response during working hours. If you message out of hours, we’ll reply as soon as we’re back.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © Keen2Klean Cleaning Services · Retail · Commercial · Builders/Sparkle · Airbnbs (South Yorkshire)
+</footer>
+
+<a class="wa-float"
+   href="https://wa.me/447444839930?text=Hi%20Keen2Klean%2C%20I%E2%80%99d%20like%20to%20request%20a%20quote.%20Location%3A%20%20Service%3A%20%20Timescales%3A%20"
+   target="_blank" rel="noopener" aria-label="Message Keen2Klean on WhatsApp">
+  WhatsApp
+</a>
+
+<script>
+  (function () {
+    const DURATION_MS = 1100;
+
+    function easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function getHeaderOffset() {
+      const header = document.querySelector('header');
+      return header ? header.getBoundingClientRect().height + 10 : 0;
+    }
+
+    function smoothScrollTo(targetY, duration) {
+      const startY = window.pageYOffset;
+      const distance = targetY - startY;
+      const startTime = performance.now();
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const t = Math.min(1, elapsed / duration);
+        const eased = easeInOutCubic(t);
+        window.scrollTo(0, startY + distance * eased);
+        if (t < 1) requestAnimationFrame(step);
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+
+        const el = document.querySelector(href);
+        if (!el) return;
+
+        e.preventDefault();
+
+        const rect = el.getBoundingClientRect();
+        const offset = getHeaderOffset();
+        const targetY = rect.top + window.pageYOffset - offset;
+
+        smoothScrollTo(Math.max(0, targetY), DURATION_MS);
+        history.pushState(null, '', href);
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
